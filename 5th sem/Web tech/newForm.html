@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    
+    <form>
+        <!-- eta on click cholke jaoa solid text dekhay -->
+        <label for="name">Name:</label>
+        <input type="text" onfocus="this.value=''"value="your name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" onfocus="this.value=''" value="your mail" name="mail" required>
+        <br><br>
+        <label for="pass">Password:</label>
+        <!-- eta fade text dekhay -->
+        <input type="password" placeholder="enter password"required>
+        <br><br>
+        <label for="pno">Phone Number:</label>
+        <input type="text" name="number" required>
+        <br><br>
+        Language:
+        <select name="lang" id="language">
+            <option value="eng">English</option>
+            <option value="bang">Bengali</option>
+            <option value="hin">Hindi</option>
+        </select>
+        <br><br>
+        <label for="zip">ZIP Code:</label>
+        <input type="number" name="zip">
+        <br><br>
+        <input type="submit" value="Register">
+
+    </form>
+</body>
+</html>
