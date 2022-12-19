@@ -1,8 +1,12 @@
-*{
-    background-color: rgb(240, 175, 220);
-    text-align: center;
-    text-decoration-style: wavy;
-    font-size: 1000%;
-    font-weight: 200;
-    color: rgb(100, 21, 21);
+h1{
+    color:purple;
+
+}
+#cse105{
+    color:blue;
+}
+.odd{
+    color: green;
+    /* hex likhle #ffffff
+    rgb likhle (255,255,255) */
 }

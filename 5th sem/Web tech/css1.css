@@ -1,0 +1,12 @@
+body{
+    /* background-image: url("1.jpeg");
+    background-repeat: no-repeat;
+    //repeat-x,y dile oi axis e repeat 
+     background-position: middle middle;
+      background-attachment: fixed; */
+      background: #ffffff url("1.jpeg") no-repeat right top scroll;
+  }
+  h1{
+        border: 2px solid red;
+        border-radius: 15px;
+  }

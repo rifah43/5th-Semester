@@ -38,9 +38,16 @@
                 </tr>
             </tbody>
         </table> -->
-    <!-- <form action="backend.php">
+
+        <!-- for backend action="backend.php" -->
+    <form >
         <div>
-            Name: <input type="text">
+            <label for="name">Name:</label>
+            <input type="text" value="Rifah">
+        </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text">
         </div>
         <div>
             roll: <input type="number">
@@ -51,14 +58,32 @@
         <div>
             <input type="submit" value="click">
         </div>
+        <!-- <div>
+            Gender:<br>
+            male<input type="radio" name="gender"> female<input type="radio" name="gender">
+        </div> -->
+        <br>
+        <label for="male">Male</label>
+        <input type="radio" id ="male" name= "gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id ="female" name= "gender" value="female">
         <div>
-            1:<input type="radio" name="gender"> 2:<input type="radio" name="gender">
+            1. HTML:<input type="checkbox" id="topic1" name="topic1" value="HTML">
+            <br> 2: CSS<input type="checkbox" id="topic2" name="topic2" value="CSS">
+            <br> 3: JS<input type="checkbox" id="topic3" name="topic3" value="JS">
         </div>
         <div>
-            1:<input type="checkbox" name="lili"> 2:<input type="checkbox" name="lili">
+            Education level completed:
+            <label for="edu">Select one:</label>
+            <select name="level" id="eduLevel">
+                <option value="ssc">SSC</option>
+                <option value="hsc">HSC</option>
+                <option value="honors">Honors</option>
+                <option value="masters">Masters</option>
+            </select>
         </div>
         <div>
-            <textarea name="text" cols="30" rows="10">
+            <textarea name="text" cols="30" rows="10" style="size-adjust:initial;">
 
             </textarea>
         </div>
@@ -70,8 +95,8 @@
                 <option value="titi" selected>T</option>
             </select>
         </div>
-    </form> -->
-    <p style="border:10px dashed rgba(7, 7, 83, 0.808);">paragraph</p>
-    <span>para2</span>
+    </form>
+    <!-- <p style="border:10px dashed rgba(7, 7, 83, 0.808);">paragraph</p>
+    <span>para2</span> -->
     </body>
 </html>
