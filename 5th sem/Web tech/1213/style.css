@@ -1,0 +1,103 @@
+body{
+    background-image: url('bg.png');
+    background-color: rgb(28, 0, 58);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(Christmas.otf);
+ }
+@font-face {
+font-family: my2Font;
+src: url(font.ttf);
+}
+#intro{
+    font-size: 50px;
+    font-weight: 400;
+    color: beige;
+    font-family: myFirstFont;
+    animation: color-change 5s infinite;
+}
+@keyframes color-change {
+0% {
+    color:rgb(88, 255, 160)
+}
+20%{
+    color: rgb(86, 255, 201)
+}
+40% {
+    color: rgb(100, 116, 255)
+}
+60% {
+    color: rgb(224, 67, 251)
+}
+80% {
+    color: rgb(246, 76, 88)
+}
+100% {
+    color: rgb(249, 188, 66)
+}
+} 
+#navigation1{
+    position: relative;
+}
+
+#navigation1 a{
+    text-align: center;
+    float: inline-start;
+    color: rgb(245, 242, 255);
+    font-style: oblique;
+    padding: 15px 110px;
+    font-size: 30px;
+    text-decoration-line:none;
+}
+#navigation1 a:hover {
+    background-color: rgb(254, 244, 205);
+    color: rgb(5, 5, 5);
+  }
+
+#navigation1 a:active {
+    background-color: rgb(0, 80, 138);
+    color: rgb(244, 238, 247);
+  }
+#left{
+    position: relative;
+    width: 50%;
+    float: left;
+    height: 100%;
+    text-align: center;
+    color: rgb(246, 246, 190);
+    font-family: my2font;
+    font-size: 55px;
+    font-weight: 250;
+}
+#right{
+    color: bisque;
+    text-align: center;
+    animation: color-change 3s infinite;
+    font-size: 25px;
+    font-family: myFirstFont;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+@keyframes color-change {
+0% {
+    color:rgb(89, 218, 145)
+}
+50%{
+    color: rgb(255, 165, 86)
+}
+100% {
+    color: rgb(255, 141, 240)
+}
+}
+#footer{ 
+    text-shadow: 10px;
+    color: rgb(217, 231, 242);
+    text-align: center;
+}
+
