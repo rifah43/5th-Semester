@@ -49,7 +49,7 @@ src: url(font.ttf);
     float: inline-start;
     color: rgb(245, 242, 255);
     font-style: oblique;
-    padding: 15px 110px;
+    padding: 15px 60px;
     font-size: 30px;
     text-decoration-line:none;
 }
@@ -63,26 +63,24 @@ src: url(font.ttf);
     color: rgb(244, 238, 247);
   }
 #left{
-    position: relative;
+    float: left;
+    padding: 20px;
     width: 50%;
     float: left;
-    height: 100%;
     text-align: center;
     color: rgb(246, 246, 190);
     font-family: my2font;
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 250;
 }
 #right{
     color: bisque;
     text-align: center;
+    width: 40%;
     animation: color-change 3s infinite;
     font-size: 25px;
     font-family: myFirstFont;
-    position: relative;
-    width: 50%;
-    height: 100%;
-    float: left;
+    float: right;
 }
 @keyframes color-change {
 0% {
@@ -99,5 +97,7 @@ src: url(font.ttf);
     text-shadow: 10px;
     color: rgb(217, 231, 242);
     text-align: center;
+    left: 45%;
+    position: fixed;
 }
 
