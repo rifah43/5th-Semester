@@ -1,36 +1,31 @@
-body{
-    background-image: url('bg.png');
-    background-color: rgb(28, 0, 58);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#navigation2{
-    position: relative;
-}
-
-#navigation2 a{
-    text-align: center;
-    float: inline-start;
-    color: rgb(245, 242, 255);
-    font-style: oblique;
-    padding: 15px 110px;
-    font-size: 30px;
-    text-decoration-line:none;
-}
-#navigation2 a:hover {
-    background-color: rgb(254, 244, 205);
-    color: rgb(5, 5, 5);
+@font-face {
+    font-family: myFont;
+    src: url(pics&fonts/Legend\ of\ the\ Elves.ttf);
+    }
+    @font-face {
+        font-family: myFont2;
+        src: url(pics&fonts/Christmas.otf);
+        }
+table {
+    border-collapse: collapse;
+    width: 45%;
+    background-color: rgba(240, 248, 255, 0.618);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 70px;
+    border: rgb(250, 255, 114) solid 5px;
+    font-family: myFont;
   }
-
-#navigation2 a:active {
-    background-color: rgb(0, 80, 138);
-    color: rgb(244, 238, 247);
-  }
-
-#footer{ 
-    text-shadow: 10px;
-    color: rgb(217, 231, 242);
+  
+  th, td {
+    height: 45px;
+    text-align: left;
+    padding: 8px;
     text-align: center;
-}
-
+  }
+  td{
+    font-family: myFont2;
+  }
+  
+  tr:nth-child(even) {background-color: #b5ddf98b;}

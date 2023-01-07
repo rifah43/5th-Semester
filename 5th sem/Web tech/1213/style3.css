@@ -1,36 +1,29 @@
-body{
-    background-image: url('bg.png');
-    background-color: rgb(28, 0, 58);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#navigation4{
+ul{
+    margin-top:auto;
     position: relative;
-}
-
-#navigation4 a{
-    text-align: center;
-    float: inline-end;
-    color: rgb(245, 242, 255);
-    font-style: oblique;
-    padding: 15px 110px;
+    left: 100px;
+    line-height: 2;
     font-size: 30px;
-    text-decoration-line:none;
 }
-#navigation4 a:hover {
-    background-color: rgb(254, 244, 205);
-    color: rgb(5, 5, 5);
-  }
-
-#navigation4 a:active {
-    background-color: rgb(0, 80, 138);
-    color: rgb(244, 238, 247);
-  }
-
-#footer{ 
-    text-shadow: 10px;
-    color: rgb(217, 231, 242);
+li{
+    color: rgb(251, 251, 69);
+    background-color: rgba(127, 255, 212, 0.333);
+    width: 84%;
+    border-radius: 10px;
+}
+li:hover{
+    color: rgb(255, 149, 149);
+    background-color: rgba(105, 245, 121, 0.333);
+    width: 84%;
+    border-radius: 10px;
+}
+@font-face {
+    font-family: myFont;
+    src: url(pics&fonts/Christmas.otf);
+    }
+.image{
     text-align: center;
+    color: rgb(253, 83, 4);
+    font-size: 50px;
+    font-family: myFont;
 }
-

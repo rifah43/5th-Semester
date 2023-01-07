@@ -1,57 +1,37 @@
-body{
-    background-image: url('bg.png');
-    background-color: rgb(28, 0, 58);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#navigation3{
-    position: relative;
-}
-
-#navigation3 a{
-    text-align: center;
-    float: inline-start;
-    color: rgb(245, 242, 255);
-    font-style: oblique;
-    padding: 15px 110px;
-    font-size: 30px;
-    text-decoration-line:none;
-}
-#navigation3 a:hover {
-    background-color: rgb(254, 244, 205);
-    color: rgb(5, 5, 5);
-}
-#navigation3 a:active {
-    background-color: rgb(0, 80, 138);
-    color: rgb(244, 238, 247);
-}
+@font-face {
+    font-family: myFont;
+    src: url(pics&fonts/Legend\ of\ the\ Elves.ttf);
+    }
 #left{
-    position: relative;
-    width: 50%;
     float: left;
-    height: 100%;
-    text-align: center;
-    color: rgb(246, 246, 190);
-    font-family: my2font;
-    font-size: 55px;
-    font-weight: 250;
+    width: 45%;
+    left: 60px;
+    position: relative;
+    font-family: myFont;
 }
 #right{
-    color: bisque;
-    text-align: center;
-    animation: color-change 3s infinite;
-    font-size: 25px;
-    font-family: myFirstFont;
+    top: 30px;
+    right: 150px;
     position: relative;
-    width: 50%;
-    height: 100%;
-    float: left;
-}
-
-#footer{ 
-    text-shadow: 10px;
-    color: rgb(217, 231, 242);
     text-align: center;
+    font-size: 25px;
+    float: right;
 }
-
+span{
+    padding: 15px;
+    font-size: 25px;
+    font-style:oblique;
+    font-weight: 10px;
+    width: 80%;
+    color: azure;
+    ;
+  }
+  
+#sch,#ach {
+    padding: 15px;
+    font-size: 15pxm;
+    color: rgb(255, 245, 101);
+    margin: 5px;
+    line-height: 3;
+    width: 70%;
+  }
