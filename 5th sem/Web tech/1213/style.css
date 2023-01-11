@@ -1,10 +1,10 @@
 @font-face {
     font-family: myFirstFont;
-    src: url(pics&fonts/Christmas.otf);
+    src: url(Christmas.otf);
  }
 @font-face {
 font-family: my2Font;
-src: url(pics&fonts/font.ttf);
+src: url(font.ttf);
 }
 #intro{
     font-size: 50px;

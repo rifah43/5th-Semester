@@ -2,7 +2,7 @@ html, body{
     height: 100%;
 }
 body{
-    background-image: url('pics&fonts/bg.png');
+    background-image: url('bg.png');
     background-color: rgb(28, 0, 58);
     background-attachment: fixed;
     background-size: cover;

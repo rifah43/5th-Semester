@@ -1,10 +1,10 @@
 @font-face {
     font-family: myFont;
-    src: url(pics&fonts/Legend\ of\ the\ Elves.ttf);
+    src: url(Legend\ of\ the\ Elves.ttf);
     }
     @font-face {
         font-family: myFont2;
-        src: url(pics&fonts/Christmas.otf);
+        src: url(Christmas.otf);
         }
 table {
     border-collapse: collapse;
