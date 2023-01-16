@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #dv{
+            background-color: aquamarine;
+        }
+        p{
+            border: solid 2px rebeccapurple;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="dv">
+        <p>This is para 1</p>
+        <p id="rm">This is para 2</p>
+        <p>This is para 3</p>
+    </div>
+
+    <script>
+        let para=document.createElement("p");
+        para.innerText = "hello";
+        document.body.appendChild(para);
+        // document.body.removeChild(document.getElementById("rm"));
+        // let para2= document.getElementById("rm");
+        // para2.remove();
+        console.log("KHATAM");
+        console.log("TATA");
+        let dv= document.getElementById("dv");
+        // dv.removeChild(dv.firstElementChild);
+        // dv.insertBefore(para,dv.lastElementChild);
+        console.log("BYE BYE");
+        let para1= document.getElementById("rm");
+        let idName = para1.getAttribute("id");
+        dv.setAttribute("class",idName);
+    </script>
+</body>
+</html>
