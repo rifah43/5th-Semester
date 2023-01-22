@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Game</title>
+</head>
+<body class="col-lg-12">
+    <audio src="a.mp3"></audio>
+    <audio id="bg" src="b.mp3" loop autoplay></audio>
+    <div id="o" class="col-lg-4">
+        <div><button id="on" type="button" class="btn btn-sm"></button></div>
+        <div><button id="tw" type="button" class="btn btn-sm"></button></div>
+        <div><button id="th" type="button" class="btn btn-sm"></button></div>
+        <div><button id="f" type="button" class="btn btn-sm"></button></div>
+    </div>
+    <div id="t" class="col-lg-4">
+    </div>
+    <div id="h" class="col-lg-4">
+    </div>
+
+    <div id="dw" class="col-lg-12">
+        <div class="bt"><button id="2-1" type="button" class="btn btn-sm" onclick="twtoo()">2=>1</button></div>
+        <div class="bt"><button id="1-2" type="button" class="btn btn-sm" onclick="ototw()">1=>2</button></div>
+        <div class="bt"><button id="3-1" type="button" class="btn btn-sm" onclick="thtoo()">3=>1</button></div>
+        <div class="bt"><button id="1-3" type="button" class="btn btn-sm" onclick="ototh()">1=>3</button></div>
+        <div class="bt"><button id="3-2" type="button" class="btn btn-sm" onclick="thotw()">3=>2</button></div>
+        <div class="bt"><button id="2-3" type="button" class="btn btn-sm" onclick="twtoth()">2=>3</button></div><br>
+        <div class="bt"><button id="reset" type="button" class="btn btn-sm" onclick="res()">Reset now!</button></div>     
+    </div>
+    <div id="hint"> <button type="button" class="btn btn-sm" onclick="window.open('instruct.html', '_blank', 'resizable=yes,width=400,height=400')">Instruction</button>
+    </div>
+    <div id="dcd"><button id="decide" type="button" class="btn btn-sm" onclick="check()">Check</button></div>
+    <div id="vol">
+        <h4>Volume:</h4>
+        <div><button id="volumeUp" type="button" class="btn btn-sm">+</button></div>
+        <div><button id="volumeDown" type="button" class="btn btn-sm">-</button></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html

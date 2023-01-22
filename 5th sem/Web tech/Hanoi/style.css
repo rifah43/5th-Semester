@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(219, 249, 99);
+    position: relative;
+}
+#tw,#th,#f,#on{
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(165, 42, 42, 0.832);
+}
+.bt{
+    float: left;
+    padding: 10px;
+    width: 16.6%;
+    margin: auto;
+}
+#o{
+    background-color: rgba(0, 0, 255, 0.781);
+    border: solid 2px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 400px;
+    background-image: url('1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#t{
+    background-color: rgba(221, 0, 255, 0.781);
+    border: solid 2px;
+    display: flex;
+    flex-direction:column-reverse;
+    height: 400px;
+    margin: auto;
+    background-image: url('2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#h{
+    background-color: rgba(255, 0, 170, 0.781);
+    border: solid 2px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 400px;
+    background-image: url('3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.btn {
+    border: 2px solid rgb(92, 3, 3);
+    background-color: rgb(240, 179, 179);
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+    width:120px;
+}
+.btn:hover {opacity: 0.6}
+#vol{
+    right: 100px;
+    bottom: 15px;
+    position: fixed;
+    width: 25%;
+    font-size: small;
+}
+#vol h4{
+    float: left;
+    display: inline;
+}
+#vol button{
+    float: right;
+    display: inline;
+}
+#reset{
+    background-color: red;
+    font-weight:bold;
+}
+#hint{
+    left: 25px;
+    position: relative;
+    height: 10px;
+}
+#dcd button{
+    position: relative;
+    right:35px;
+    float: right;
+    bottom: 65px;
+    background-color: greens;
+}
