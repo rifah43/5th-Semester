@@ -1,3 +1,4 @@
+// const diskNo = parseInt(prompt('Enter the number of disks'));
 function sound() {
     let Sound = new Audio("a.mp3");  
     Sound.play();
@@ -25,62 +26,148 @@ function ototw(){
     let on= document.getElementById("o");
     let child= on.lastElementChild;
     let tt= document.getElementById("t");
-    tt.appendChild(child,tt.lastElementChild);
-    on.removeChild(child);
+    if(on.children.length != 0){
+        if(tt.children.length ===0){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+        else if(parseInt(tt.lastElementChild.innerText)>parseInt(on.lastElementChild.innerText)){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+    }
 }
 function ototh(){
     let on= document.getElementById("o");
     let child= on.lastElementChild;
     let tt= document.getElementById("h");
-    tt.appendChild(child,tt.lastElementChild);
-    on.removeChild(child);
+    if(on.children.length != 0){
+        if(tt.children.length ===0){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+        else if(parseInt(tt.lastElementChild.innerText)>parseInt(on.lastElementChild.innerText)){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+    }
 }
 function thotw(){
     let on= document.getElementById("h");
     let child= on.lastElementChild;
     let tt= document.getElementById("t");
-    tt.appendChild(child,tt.lastElementChild);
-    on.removeChild(child);
+    if(on.children.length != 0){
+        if(tt.children.length ===0){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+        else if(parseInt(tt.lastElementChild.innerText)>parseInt(on.lastElementChild.innerText)){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+    }
 }
 function twtoth(){
     let on= document.getElementById("t");
     let child= on.lastElementChild;
     console.log(on);
     let tt= document.getElementById("h");
-    tt.appendChild(child,tt.lastElementChild);
-    on.removeChild(child);
+    if(on.children.length != 0){
+        if(tt.children.length ===0){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+        else if(parseInt(tt.lastElementChild.innerText)>parseInt(on.lastElementChild.innerText)){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+    }
 }
 function thtoo(){
     let on= document.getElementById("h");
     let child= on.lastElementChild;
     console.log(on);
     let tt= document.getElementById("o");
-    tt.appendChild(child,tt.lastElementChild);
-    on.removeChild(child);
+    if(on.children.length != 0){
+        if(tt.children.length ===0){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+        else if(parseInt(tt.lastElementChild.innerText)>parseInt(on.lastElementChild.innerText)){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+    }
 }
 function twtoo(){
     let on= document.getElementById("t");
     let child= on.lastElementChild;
     console.log(on);
     let tt= document.getElementById("o");
-    tt.appendChild(child,tt.lastElementChild);
-    on.removeChild(child);
+    if(on.children.length != 0){
+        if(tt.children.length ===0){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+        else if(parseInt(tt.lastElementChild.innerText)>parseInt(on.lastElementChild.innerText)){
+            tt.appendChild(child,tt.lastElementChild);
+            on.removeChild(child);
+        }
+    }
 }
-function getRandomNumberWithTime() {
-const time = new Date().getMilliseconds()*Math.random();
-return (time);
+let numbers = new Set();
+let num1=0, num2=0, num3=0, num4=0;
+let cnt=0;
+let cnt2=1;
+let lent=0;
+while(numbers.size < 4) {
+    var randomNum = Math.floor(Math.random() * 4) + 1;
+    if(randomNum===cnt2){
+        lent++;
+    }
+    cnt2++;
+    numbers.add(randomNum);
 }
-console.log(getRandomNumberWithTime());
-document.getElementById('on').innerHTML= Math.floor(Math.random() * getRandomNumberWithTime());
-document.getElementById('tw').innerHTML= Math.floor(Math.random() * getRandomNumberWithTime());
-document.getElementById('th').innerHTML= Math.floor(Math.random() * getRandomNumberWithTime());
-document.getElementById('f').innerHTML= Math.floor(Math.random() * getRandomNumberWithTime());
+function randomize(){
+    lent=0;
+    while(numbers.size < 4) {
+        var randomNum = Math.floor(Math.random() * 4) + 1;
+        if(randomNum===cnt2){
+            lent++;
+        }
+        cnt2++;
+        numbers.add(randomNum);
+    }
+}
+if(lent=== 4){
+    randomize();
+}
+for (let number of numbers) {
+    if(cnt === 0){
+        num1 = number;
+    }
+    if(cnt === 1){
+        num2 = number;
+    }
+    if(cnt === 2){
+        num3 = number;
+    }
+    if(cnt === 3){
+        num4 = number;
+    }
+    cnt++;
+}
+
+document.getElementById('on').innerHTML= num1;
+document.getElementById('tw').innerHTML= num2;
+document.getElementById('th').innerHTML= num3;
+document.getElementById('f').innerHTML= num4;
 function check() {
-    var cols = document.getElementsByClassName("col-lg-4");
+    let cols = document.getElementsByClassName("col-lg-4");
     let emp=0;
     let ind=0;
     for (let i = 0; i < cols.length; i++) {
-    if (cols[i].children.length === 0) {
+    if (cols[i].children.length <4) {
         emp+=1;
         console.log("empty");
         console.log(emp);
@@ -92,8 +179,9 @@ function check() {
     }
     console.log("dhur");
     }
-    let bool= true;
+    let bool= false;
     if(emp==2){
+        bool=true
         console.log("ashi");
         console.log("aschi");
         let child = cols[ind].children;

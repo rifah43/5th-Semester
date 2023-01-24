@@ -1,13 +1,17 @@
 body{
     background-color: rgb(219, 249, 99);
     position: relative;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 #tw,#th,#f,#on{
     padding: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(165, 42, 42, 0.832);
+    background-color: rgb(165, 42, 42);
 }
 .bt{
     float: left;
@@ -20,38 +24,41 @@ body{
     border: solid 2px;
     display: flex;
     flex-direction: column-reverse;
-    height: 400px;
+    height: 500px;
     background-image: url('1.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:auto;
     background-position: center;
+    opacity: .8;
 }
 #t{
     background-color: rgba(221, 0, 255, 0.781);
     border: solid 2px;
     display: flex;
     flex-direction:column-reverse;
-    height: 400px;
+    height: 500px;
     margin: auto;
     background-image: url('2.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
+    opacity: .8;
 }
 #h{
     background-color: rgba(255, 0, 170, 0.781);
     border: solid 2px;
     display: flex;
     flex-direction: column-reverse;
-    height: 400px;
+    height: 500px;
     background-image: url('3.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
+    opacity: .8;
 }
 .btn {
-    border: 2px solid rgb(92, 3, 3);
-    background-color: rgb(240, 179, 179);
+    border: 2px solid rgba(92, 3, 3, 0.823);
+    background-color: rgba(240, 179, 179, 0.862);
     color: black;
     padding: 14px 28px;
     font-size: 16px;
@@ -66,17 +73,20 @@ body{
     bottom: 15px;
     position: fixed;
     width: 25%;
-    font-size: small;
 }
-#vol h4{
+#vol p{
     float: left;
+    border: solid 2px;
     display: inline;
+    font-size:x-large;
+    font-weight: bold;
 }
 #vol button{
     float: right;
     display: inline;
 }
 #reset{
+    text-align: center;
     background-color: red;
     font-weight:bold;
 }
