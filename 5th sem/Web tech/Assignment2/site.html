@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>My site</title>
+</head>
+<body>
+    <div class="container">
+		<div class="container">
+			<div class="formBox">
+				<form>
+						<div class="row">
+							<div class="col-sm-12">
+								<h1>Contact form</h1>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox ">
+									<div class="inputText">First Name</div>
+									<input type="text" name="" class="input">
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Last Name</div>
+									<input type="text" name="" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Email</div>
+									<input type="text" name="" class="input">
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="inputBox">
+									<div class="inputText">Mobile</div>
+									<input type="text" name="" class="input">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="inputBox">
+									<div class="inputText">Email</div>
+									<textarea class="input"></textarea>
+								</div>
+							</div>
+						</div>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Photo</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                          </div><br>
+                          <button type="submit" class="btn btn-default">Submit</button>
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="submit" name="" class="button" value="Send Message">
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	 <script type="text/javascript">
+	 	$(".input").focus(function() {
+	 		$(this).parent().addClass("focus");
+	 	})
+	 </script>
+</body>
+</html>
