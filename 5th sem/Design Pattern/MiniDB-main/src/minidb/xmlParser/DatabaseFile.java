@@ -30,15 +30,15 @@ public class DatabaseFile extends XMLFiles {
         this.updateFile();
     }
     public void addData(String value) {
-        String[] vals = value.split(",");
+        String[] values = value.split(",");
         String[] schemaArray = this.getSchema().split(",");
 
-        if (vals.length == schemaArray.length) {
+        if (values.length == schemaArray.length) {
             Element newDataElem = doc.createElement(TAG_DATA);
-            newDataElem.setAttribute("id", vals[0]);
+            newDataElem.setAttribute("id", values[0]);
 
             for (int i = 1; i < schemaArray.length; i++) {
-                String v = vals[i];
+                String v = values[i];
                 String s = schemaArray[i];
                 Element x = doc.createElement(s);
                 x.appendChild(doc.createTextNode(v));
@@ -75,7 +75,6 @@ public class DatabaseFile extends XMLFiles {
     }
 
     public void readData(String id) {
-        // just Trying the Xpath API, instead of using DOM API
         try {
             XPath xPath = XPathFactory.newInstance().newXPath();
             Node nameNode = (Node) xPath.compile("/Xroot/Xstorage/Xdata[@id=" + id + "]/name").evaluate(doc,

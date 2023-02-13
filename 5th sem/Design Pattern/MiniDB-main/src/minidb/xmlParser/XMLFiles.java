@@ -15,25 +15,27 @@ public abstract class XMLFiles {
     protected File xmlFile;
     protected Document doc;
     public XMLFiles(String path) {
+        findFile(path);
+    }
+    public void findFile(String path){
         try {
             xmlFile = new File(path);
-            new File(Constants.DB_DIR_PATH).mkdir(); // create `db` directory if it doesn't exist
+            new File(Constants.DB_DIR_PATH).mkdir();
             boolean NoFileFound = xmlFile.createNewFile();
-            load(NoFileFound);
+            loadFile(NoFileFound);
         } catch (ParserConfigurationException | SAXException | IOException err) {
-            System.out.println(err);
+            print(String.valueOf(err));
             err.printStackTrace();
         }
     }
-    private void load(boolean NoFile) throws ParserConfigurationException, SAXException, IOException {
+    private void loadFile(boolean NoFile) throws ParserConfigurationException, SAXException, IOException {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         if (NoFile) {
             doc = docBuilder.newDocument();
-            createFile(); // abstract method to create the file
+            createFile();
         } else {
             doc = docBuilder.parse(xmlFile);
-            ;
         }
     }
     abstract void createFile();
@@ -47,13 +49,12 @@ public abstract class XMLFiles {
             DOMSource source = new DOMSource(this.doc);
             StreamResult result = new StreamResult(this.xmlFile);
             transformer.transform(source, result);
-            print("Updated;");
+            print("File updated;");
 
         } catch (TransformerException err) {
             err.printStackTrace();
         }
     }
-
     protected void print(String x) {
         System.out.println(x);
     }
