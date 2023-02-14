@@ -1,11 +1,15 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 import constants.Constants;
 import minidb.xmlParser.Command;
 import minidb.xmlParser.DatabaseFile;
 import minidb.xmlParser.RegistryFile;
-
+import minidb.xmlParser.UnknownCommand;
+import java.util.*;
 public class Client {
+    private static Map<String, Object> commandList = new HashMap<String, Object>();
     static RegistryFile registry;
     static DatabaseFile CurrentDb;
     public static void inputValue(){
@@ -38,15 +42,18 @@ public class Client {
     private static void clientInputs(String input) {
         String[] cmdArgs = input.split(" ");
         try {
-            (Command)command.get(cmdArgs[0])).executeCommand(CurrentDb,registry,cmdArgs);
+            Object object=commandList.get(cmdArgs[0]);
+            object.executeCommand(CurrentDb,registry,cmdArgs[1]);
         }
         catch(Exception e)
         {
-            Command error_command = new CommandNotFound();
-            error_command.execute(CurrentDb,registry,cmdArgs);
+            Command unknownCommand = new UnknownCommand();
+            unknownCommand.executeCommand(CurrentDb,registry,cmdArgs);
         }
     }
-
+    public void getCommandList(HashMap<String, Object> commandList) {
+        this.commandList = commandList;
+    }
     private static void print(String x) {
         System.out.println(x);
     }

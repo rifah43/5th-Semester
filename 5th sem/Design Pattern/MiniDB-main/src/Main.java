@@ -21,8 +21,7 @@ public class Main {
         commandList.put("read", new Read());
         commandList.put("drop", new Drop());
         commandList.put("delete", new Delete());
-//        client.set_Command(command);
-//        print(Constants.HEADING);
         client.inputValue();
+        client.getCommandList((HashMap<String, Object>) commandList);
     }
 }
