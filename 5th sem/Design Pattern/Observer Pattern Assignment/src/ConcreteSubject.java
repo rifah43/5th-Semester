@@ -1,25 +1,21 @@
-import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class ConcreteSubject extends Subject{
-    try {
-        FileWriter fwrite = new FileWriter("input.txt");
-        fwrite.write("Written using FileWriter!!!");
-        fwrite.close();
-    } catch (IOException e) {
-        System.out.println("Error While Writing!!!");
-        e.printStackTrace();
-    }
-    FileReader filer = new FileReader("input.txt");
-    int i;
-    public ConcreteSubject throws IOException {
+    private FileWriter file= new FileWriter("/home/rifahtashfihafaria/IdeaProjects/Observer Pattern Assignment/src/input.txt");
+    FileReader filer = new FileReader("/home/rifahtashfihafaria/IdeaProjects/Observer Pattern Assignment/src/input.txt");
+    public ConcreteSubject() throws IOException {
+        file.write("File Manipulated!!!");
+        file.close();
+        int i;
         while((i=filer.read())!=-1)
             System.out.print((char)i);
         filer.close();
     }
-    public void monitorChange(){
-        notification();
+    public void monitorFile(){
+        System.out.println("\nChange done: "+this.file);
+        notifyObserver();
     }
 }

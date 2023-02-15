@@ -4,10 +4,10 @@ public class ConcreteObserver extends Observer{
         this.name=name;
     }
     @Override
-    public void update() {
+    public void update(Subject subject) {
         view();
     }
     public void view(){
-        System.out.println("Viewed by "+this.name);
+        System.out.println("viewed change by "+this.name);
     }
 }
