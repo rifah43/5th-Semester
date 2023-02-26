@@ -14,7 +14,7 @@
     <div class="container">
 		<div class="container">
 			<div class="formBox">
-				<form action="sitedisplay.php" method="post">
+				<form action="sitedisplay.php" method="post" enctype="multipart/form-data">
 						<div class="row ">
 							<div class="half">
 								<label for="id">First Name</label>
@@ -45,7 +45,7 @@
 						</div>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Photo</label>
-                            <input type="file" name="image">
+                            <input type="file" name="image" id="image">
                           </div><br>
 						<div class="row">
 							<div class="col-sm-6">
