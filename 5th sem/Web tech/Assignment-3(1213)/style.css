@@ -1,0 +1,48 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.formBox{
+	margin-top: 90px;
+	padding: 50px;
+}
+.half{
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+.full{
+	width: 100%;
+	display: block;
+	border: 2px black;
+}
+.focus .inputText{
+	transform: translateY(-30px);
+	font-size: 18px;
+	opacity: 1;
+	color: #00bcd4;
+
+}
+.input{
+	width: 80%;
+}
+label{
+	font-weight: bold;
+	text-align: left;
+}
+.full label{
+	display: block;
+}
+textarea{
+	height: 100px !important;
+}
+.btn{
+	font-weight: bolder;
+}
+.cancel{
+	background: rgb(255, 156, 156);
+}
+.submt{
+	background: rgb(164, 254, 185);
+}
