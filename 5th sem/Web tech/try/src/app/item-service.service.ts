@@ -11,6 +11,7 @@ export class ItemService {
   {id:3, name:"Apple", price: 100000, quantity:0}]
   constructor() { }
 
+  toBeUpdated:Item= new Item();
   getItems(): Item[]{
     return this.item;
   }
@@ -21,5 +22,13 @@ export class ItemService {
       }
     });
   }
-
+  updateToBe(index:number):void{
+    let item= this.item.at(index);
+    if(item!=null){
+      this.toBeUpdated= item;
+    }
+  }
+  getUpdate():Item{
+    return this.toBeUpdated;
+  }
 }

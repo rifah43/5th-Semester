@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Item } from '../item';
 import { ItemService } from '../item-service.service';
 
@@ -9,7 +10,7 @@ import { ItemService } from '../item-service.service';
 })
 export class ItemComponent implements OnInit{
 
-constructor(private itemService: ItemService) {}
+constructor(private itemService: ItemService, private route:Router) {}
 item: Item[]=[];
 ngOnInit(): void {
   this.item = this.itemService.getItems();
@@ -23,6 +24,12 @@ buyItem(quantity:number, name:string): void{
   quantity--;
   this.itemService.decrease(name);
   alert("Item "+name+" is bought!\n Updated quantity is "+quantity);
+}
+
+updateList(index:number):void{
+  // alert("Updated!");
+  this.route.navigate(["update"]);
+  this.itemService.updateToBe(index);
 }
 
 }
